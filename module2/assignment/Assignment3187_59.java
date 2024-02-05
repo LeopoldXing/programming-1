@@ -21,9 +21,17 @@ public class Assignment3187_59 {
 
         // Generate 5 randomNumbers
         for (int i = 0; i < 5; i++) {
+            /**
+             * Information about function nextInt(int origin, int bound), From JDK21 source code:
+             * Params:
+             *      origin – the least value that can be returned
+             *      bound – the upper bound (exclusive) for the returned value
+             * Returns:
+             *      a pseudorandomly chosen int value between the origin (inclusive) and the bound (exclusive)
+             */
             randomNumbers[i] = random.nextInt(60, 101);
 
-            // Usng Math to get the smallest Number
+            // Using Math to get the smallest Number
             if(i == 0) {
                 smallestNumber = randomNumbers[0];
             } else {
@@ -31,7 +39,7 @@ public class Assignment3187_59 {
             }
         }
 
-        // Display results
+        // Print results
         System.out.println("Random numbers: "
                 + randomNumbers[0] + ", "
                 + randomNumbers[1] + ", "

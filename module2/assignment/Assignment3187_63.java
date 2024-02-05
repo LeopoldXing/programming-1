@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Program: Full Stack Web Development 24Winter
  * Course: Programming-1
  * Created: Jan 15, 2024
- * Updated: Jan 15, 2024
+ * Updated: Jan 22, 2024
  */
 public class Assignment3187_63 {
     /**
@@ -16,25 +16,27 @@ public class Assignment3187_63 {
      * @param args
      */
     public static void main(String[] args) {
+        // Initialization
         Scanner scanner = new Scanner(System.in);
         int [] numberOfYears = {5, 10, 20};
-        NumberFormat formatter = NumberFormat.getInstance(Locale.CANADA);
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.CANADA);
 
         // Get user input
-        System.out.println("Enter the investment amount: ");
-        String investment = scanner.nextLine();
-        System.out.println("Enter the annual interest rate: ");
-        String interestRate = scanner.nextLine();
+        System.out.print("Enter the investment amount: ");
+        double investment = scanner.nextDouble();
+        System.out.print("Enter the annual interest rate: ");
+        double interestRate = scanner.nextDouble();
 
-        // Parsing the number
-
-
-        // Calculating and formatting result
-
-
-        // Displaying order
+        // Calculating, formatting and printing result
         for(int i = 0; i < numberOfYears.length; i++) {
-            System.out.println("The future value after " + numberOfYears[i] + " years is {future_value}.");
+            // Calculating result
+            double futureReturns = investment * Math.pow(1 + interestRate, numberOfYears[i]);
+
+            // formatting result
+            String formattedResult = formatter.format(futureReturns);
+
+            // Displaying result
+            System.out.println("The future value after " + numberOfYears[i] + " years is " + formattedResult + ".");
         }
     }
 }

@@ -14,6 +14,7 @@ public class Assignment3187_65 {
      * @param args
      */
     public static void main(String[] args) {
+        // Initialization
         Scanner scanner = new Scanner(System.in);
 
         // Getting user input
@@ -25,7 +26,7 @@ public class Assignment3187_65 {
         String username = res[0];
         String domain = res[1];
 
-        //Displaying result
+        // Printing result
         System.out.println("The username is " + username + ".");
         System.out.println("The domain is " + domain + ".");
     }

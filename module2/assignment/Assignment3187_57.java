@@ -46,7 +46,7 @@ public class Assignment3187_57 {
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.CANADA);
         String formattedCurrency = formatter.format(sum);
 
-
+        // Print out the result
         System.out.println("The amount of money is " + formattedCurrency + ".");
     }
 }
