@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Program: Full Stack Web Development 24Winter
  * Course: Programming-1
  * Created: Jan 30, 2024
- * Updated: Jan 30, 2024
+ * Updated: Feb 5, 2024
  */
 public class Assignment5147_50 {
 
@@ -23,6 +23,11 @@ public class Assignment5147_50 {
         int temperature = scanner.nextInt();
         String season = "";
 
+        if(temperature < -5 || temperature > 110) {
+            System.out.println("The temperature is out of range");
+            return;
+        }
+
         // Parsing input
         if(temperature >= 90) {
             season = "summer";
@@ -35,10 +40,6 @@ public class Assignment5147_50 {
         }
 
         // Printing results
-        if(temperature < -5 || temperature > 110) {
-            System.out.println("The temperature is out of range");
-            return;
-        }
-        System.out.println("The season is " + season);
+        System.out.println("The season is " + season + ".");
     }
 }
