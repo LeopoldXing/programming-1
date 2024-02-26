@@ -9,8 +9,6 @@ import java.util.Scanner;
  */
 public class Assignment614760 {
 
-    private static final String commercialWebReg = "^([a-zA-Z0-9-]+\\.)*[a-zA-Z0-9-]+\\.(com|COM)$";
-
     /**
      * Description: Main function and program entrance of the assignment4, 6.14.7-No60
      *
@@ -20,24 +18,19 @@ public class Assignment614760 {
         // Getting user input
         System.out.println("<Type \"stop\" to end the program>");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a web address: ");
         int res = 0;
 
-        while (scanner.hasNextLine()) {
-            String input = scanner.nextLine();
-
-            // Determine whether user typed in STOP
-            if("stop".equalsIgnoreCase(input)) {
+        while (true) {
+            System.out.print("Enter a web address: ");
+            String webAddress = scanner.nextLine().toLowerCase();
+            if ("stop".equals(webAddress)) {
                 break;
             }
-
-            // Determine if it is a web and if it is commercial
-            if(input != null && input.matches(commercialWebReg)) {
+            if (webAddress.endsWith(".com") && !webAddress.equals(".com")) {
                 res++;
             }
         }
 
-        // Printing result
-        System.out.println("The number of commercial websites entered " + res + ".");
+        System.out.println("The number of commercial websites entered is " + res + ".");
     }
 }

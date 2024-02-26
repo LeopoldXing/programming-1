@@ -21,13 +21,13 @@ public class Assignment614767 {
         String input = scanner.nextLine();
 
         // 1st loop to create a String with only letters
-        StringBuffer sentenceBuffer = new StringBuffer();
+        StringBuffer buffer = new StringBuffer();
         for (int i = 0; i < input.length(); i++) {
             if (Character.isLetter(input.charAt(i))) {
-                sentenceBuffer.append(input.charAt(i));
+                buffer.append(input.charAt(i));
             }
         }
-        String sentence = sentenceBuffer.toString();
+        String sentence = buffer.toString();
 
         // Printing result
         if (isPalindrome(sentence)) {
