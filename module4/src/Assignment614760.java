@@ -20,12 +20,12 @@ public class Assignment614760 {
         Scanner scanner = new Scanner(System.in);
         int res = 0;
 
-        while (true) {
+        String webAddress = "";
+
+        while (!"stop".equals(webAddress)) {
             System.out.print("Enter a web address: ");
-            String webAddress = scanner.nextLine().toLowerCase();
-            if ("stop".equals(webAddress)) {
-                break;
-            }
+            webAddress = scanner.nextLine().toLowerCase();
+
             if (webAddress.endsWith(".com") && !webAddress.equals(".com")) {
                 res++;
             }
