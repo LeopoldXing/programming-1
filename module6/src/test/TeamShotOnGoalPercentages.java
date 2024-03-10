@@ -57,7 +57,7 @@ public class TeamShotOnGoalPercentages {
      * @return a copy of the shot on goal percentages.
      */
     public double[] getPercentages() {
-        return percentages;
+        return copyPercentages(percentages);
     }
 
     /**
@@ -143,9 +143,9 @@ public class TeamShotOnGoalPercentages {
         stringBuilder.append("Player        SOG%\n");
         stringBuilder.append("--------------------\n");
         for (int i = 0; i < percentages.length; i++) {
-            stringBuilder.append(i + 1 + '\n');
-            stringBuilder.append("              \n");
-            stringBuilder.append(percentages[i] + '\n');
+            stringBuilder.append(i + 1);
+            stringBuilder.append("             ");
+            stringBuilder.append(percentages[i]).append("\n");
         }
 
         return stringBuilder.toString();

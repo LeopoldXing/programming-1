@@ -18,8 +18,7 @@ import library.WeatherForecast;
 public class WeatherForecastTests {
     public static void main(String[] args) {
         // Test Unit: WeatherForecast(int)
-        System.out.println(" --------------------------------------- Test Unit 1: WeatherForecast(int) --------------------------------------- ");
-
+        System.out.println("WeatherForecast(int)");
         // Test #1 - Initialize the temperature with a value below the minimum.
         System.out.println("Test #1 - Initialize the temperature with a value below the minimum.");
         WeatherForecast weatherForecast = new WeatherForecast(-100);
@@ -64,8 +63,7 @@ public class WeatherForecastTests {
 
 
         // Test Unit: WeatherForecast()
-        System.out.println(" --------------------------------------- Test Unit 2: WeatherForecast() --------------------------------------- ");
-
+        System.out.println("WeatherForecast()");
         // Initialize the temperature.
         System.out.println("Test #7 - Initialize the temperature.");
         weatherForecast = new WeatherForecast();
@@ -82,7 +80,7 @@ public class WeatherForecastTests {
 
 
         // Test Unit: setTemperature(int) : void
-        System.out.println(" --------------------------------------- Test Unit 3: setTemperature(int) : void --------------------------------------- ");
+        System.out.println("setTemperature(int) : void");
         // Update the state of the temperature with a value below the minimum.
         System.out.println("Test #9 - Update the state of the temperature with a value below the minimum.");
         weatherForecast = new WeatherForecast();
@@ -125,7 +123,7 @@ public class WeatherForecastTests {
 
 
         // Test Unit: setSkyCondition(SkyCondition) : void
-        System.out.println(" --------------------------------------- Test Unit 4: setSkyCondition(SkyCondition) : void --------------------------------------- ");
+        System.out.println("setSkyCondition(SkyCondition) : void");
         // Update state of sky condition.
         System.out.println("Test #14 - Update state of sky condition.");
         weatherForecast = new WeatherForecast();
@@ -136,7 +134,7 @@ public class WeatherForecastTests {
 
 
         // Test Unit: (static) toCelsius(int) : int
-        System.out.println(" --------------------------------------- Test Unit 5: (static) toCelsius(int) : int --------------------------------------- ");
+        System.out.println("(static) toCelsius(int) : int");
         // Returns the temperature in Celsius.
         System.out.println("Test #15 - Returns the temperature in Celsius.");
         System.out.println("Expected: 49");
@@ -145,7 +143,7 @@ public class WeatherForecastTests {
 
 
         // Test Unit: isConsistent() : boolean
-        System.out.println(" --------------------------------------- Test Unit 6: isConsistent() : boolean --------------------------------------- ");
+        System.out.println("isConsistent() : boolean");
         // The temperature is too hot for snow.
         System.out.println("Test #16 - The temperature is too hot for snow.");
         weatherForecast = new WeatherForecast();
@@ -179,7 +177,7 @@ public class WeatherForecastTests {
         System.out.println();
 
         // Test Unit: toString() : String
-        System.out.println(" --------------------------------------- Test Unit 6: toString() : String --------------------------------------- ");
+        System.out.println("toString() : String");
         // Returns the correct String representation.
         System.out.println("Test #20 - Returns the correct String representation.");
         weatherForecast = new WeatherForecast(140);
