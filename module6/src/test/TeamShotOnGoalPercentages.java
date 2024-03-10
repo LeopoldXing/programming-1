@@ -3,7 +3,7 @@
  * Program: Full Stack Web Development 24Winter
  * Course: Programming-1
  * Created: Mar 1, 2024
- * Updated: Mar 1, 2024
+ * Updated: Mar 10, 2024
  */
 package test;
 
@@ -77,51 +77,24 @@ public class TeamShotOnGoalPercentages {
     public double[] getSortedPercentages() {
         double[] res = copyPercentages(percentages);
 
-        quickSort(res, 0, res.length - 1);
-
-        return res;
-    }
-
-    /**
-     * "Quick Sort" algorithm
-     * Average time complexity: O(N * lgN)
-     *
-     * @param unSortedPercentages The array waiting to be sorted.
-     * @param l                   Left pointer
-     * @param r                   Right pointer
-     */
-    private void quickSort(double[] unSortedPercentages, int l, int r) {
-        if (l < r) {
-            // index of left pointer
-            int i = l;
-
-            // index of right pointer
-            int j = r;
-
-            // current double value
-            double currentPercentage = unSortedPercentages[i];
-
-            while (i < j) {
-                while (i < j && unSortedPercentages[j] > currentPercentage) {
-                    // Find the first number less than currentPercentage from right to left
-                    j--;
-                }
-                if (i < j) {
-                    unSortedPercentages[i++] = unSortedPercentages[j];
-                }
-                while (i < j && unSortedPercentages[i] < currentPercentage) {
-                    // Find the first number greater than currentPercentage from left to right
-                    i++;
-                }
-                if (i < j) {
-                    unSortedPercentages[j--] = unSortedPercentages[i];
+        for (int i = 0; i < res.length; i++) {
+            // find the largest element
+            double maxVal = Double.MIN_VALUE;
+            int maxIndex = i;
+            for (int j = i; j < res.length; j++) {
+                if(res[j] > maxVal) {
+                    maxIndex = j;
+                    maxVal = res[j];
                 }
             }
-            unSortedPercentages[i] = currentPercentage;
-            // Recursive method call
-            quickSort(unSortedPercentages, l, i - 1);
-            quickSort(unSortedPercentages, i + 1, r);
+
+            // swap the current value with the maxVal
+            double temp = res[i];
+            res[i] = res[maxIndex];
+            res[maxIndex] = temp;
         }
+
+        return res;
     }
 
     /**
@@ -163,7 +136,6 @@ public class TeamShotOnGoalPercentages {
      *
      * @return the String representation of the class.
      */
-    @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
 
