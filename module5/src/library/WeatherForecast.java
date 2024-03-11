@@ -1,3 +1,4 @@
+package library;
 /**
  * Name: Luping Xing
  * Program: Full Stack Web Development 24Winter
@@ -5,7 +6,6 @@
  * Created: Mar 1, 2024
  * Updated: Mar 1, 2024
  */
-package library;
 
 /**
  * A class encapsulating the concept of a weather forecast.
@@ -28,17 +28,17 @@ public class WeatherForecast {
     /**
      * The factor used for determining if the weather forecast is consistent.
      */
-    public int CONSISTENCY_FACTOR = 32;
+    public static final int CONSISTENCY_FACTOR = 32;
 
     /**
      * The minimum possible value of the weather forecast’s temperature.
      */
-    public int MINIMUM_TEMPERATURE = -50;
+    public static final int MINIMUM_TEMPERATURE = -50;
 
     /**
      * The maximum possible value of the weather forecast’s temperature.
      */
-    public int MAXIMUM_TEMPERATURE = 150;
+    public static final int MAXIMUM_TEMPERATURE = 150;
 
     /**
      * Initializes a new instance of WeatherForecast class with a temperature of 70 degrees and a sky condition of sunny.
@@ -123,9 +123,9 @@ public class WeatherForecast {
      * @return Boolean value indicates if weather forecast is consistent.
      */
     public boolean isConsistent() {
-        if (temperature > 32 && skyCondition == SkyCondition.SNOWY) {
+        if (temperature > CONSISTENCY_FACTOR && skyCondition == SkyCondition.SNOWY) {
             return false;
-        } else if (temperature < 32 && skyCondition == SkyCondition.RAINY) {
+        } else if (temperature < CONSISTENCY_FACTOR && skyCondition == SkyCondition.RAINY) {
             return false;
         } else {
             return true;
@@ -137,7 +137,6 @@ public class WeatherForecast {
      *
      * @return A String representation of the class.
      */
-    @Override
     public String toString() {
         return "Current condition: " + temperature + " and is " + skyCondition;
     }

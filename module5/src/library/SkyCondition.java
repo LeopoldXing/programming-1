@@ -1,3 +1,4 @@
+package library;
 /**
  * Name: Luping Xing
  * Program: Full Stack Web Development 24Winter
@@ -5,7 +6,6 @@
  * Created: Mar 1, 2024
  * Updated: Mar 1, 2024
  */
-package library;
 
 /**
  * An enumeration that is used to specify sky conditions for a weather forecast.
