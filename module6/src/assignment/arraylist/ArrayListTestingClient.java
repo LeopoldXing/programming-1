@@ -1,4 +1,4 @@
-package arraylist;
+package assignment.arraylist;
 /**
  * Name: Luping Xing
  * Program: Full Stack Web Development 24Winter
@@ -7,7 +7,7 @@ package arraylist;
  * Updated: Mar 10, 2024
  */
 
-import library.TeamShotOnGoalPercentages;
+import assignment.library.TeamShotOnGoalPercentages;
 
 import java.util.ArrayList;
 import java.util.Random;

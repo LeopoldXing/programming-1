@@ -1,4 +1,4 @@
-package test;
+package assignment.test;
 /**
  * Name: Luping Xing
  * Program: Full Stack Web Development 24Winter

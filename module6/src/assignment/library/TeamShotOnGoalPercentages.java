@@ -5,7 +5,7 @@
  * Created: Mar 1, 2024
  * Updated: Mar 10, 2024
  */
-package test;
+package assignment.library;
 
 /**
  * A class encapsulating the concept of a team’s percentages for shots on goal
