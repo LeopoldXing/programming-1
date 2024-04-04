@@ -3,9 +3,9 @@
  * Program: Full Stack Web Development 24Winter
  * Course: Programming-1
  * Created: Mar 11, 2024
- * Updated: Mar 11, 2024
+ * Updated: Apr 4, 2024
  */
-package library;
+package assignment.test;
 
 /**
  * A class encapsulating the concept of a Player on a sports team
@@ -32,7 +32,8 @@ public class Player {
      * @param number - The player’s jersey number.
      */
     public Player(String name, int number) {
-
+        this.name = name;
+        this.number = number;
     }
 
     /**
@@ -85,6 +86,7 @@ public class Player {
      *
      * @return Returns the String representation of the player.
      */
+    @Override
     public String toString() {
         return name + " " + "[" + number + "]";
     }

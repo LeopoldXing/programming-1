@@ -1,4 +1,4 @@
-package groupActivity;
+package groupActivity.part1;
 
 import java.util.Arrays;
 
