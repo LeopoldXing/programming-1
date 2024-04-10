@@ -54,7 +54,7 @@ public class HockeyPlayer extends Player {
     /**
      * Returns the number of goals scored by the hockey player.
      *
-     * @return
+     * @return the number of goals scored by the hockey player.
      */
     public int getGoals() {
         return goals;
@@ -72,7 +72,7 @@ public class HockeyPlayer extends Player {
     /**
      * Returns the number of assists made by the hockey player.
      *
-     * @return
+     * @return the number of assists made by the hockey player.
      */
     public int getAssists() {
         return assists;
@@ -90,7 +90,7 @@ public class HockeyPlayer extends Player {
     /**
      * Returns the total number of points accumulated by the hockey player.
      *
-     * @return
+     * @return the total number of points accumulated by the hockey player.
      */
     @Override
     public int getPoints() {
@@ -100,7 +100,7 @@ public class HockeyPlayer extends Player {
     /**
      * Returns the String representation of the player.
      *
-     * @return
+     * @return the String representation of the player.
      */
     @Override
     public String toString() {

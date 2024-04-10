@@ -8,7 +8,7 @@
 package assignment.library;
 
 /**
- * a class encapsulating the concept of a basketball player
+ * A class encapsulating the concept of a basketball player
  *
  * @author Luping Xing [lxing2@rrc.ca]
  * @version 1.0.0
@@ -44,9 +44,9 @@ public class BasketballPlayer extends Player {
     }
 
     /**
-     * Returns the number of free throws made by the basketball player.
+     * Returns The number of free throws made by the basketball player.
      *
-     * @return
+     * @return The number of free throws made by the basketball player.
      */
     public int getFreeThrows() {
         return freeThrows;
@@ -64,7 +64,7 @@ public class BasketballPlayer extends Player {
     /**
      * Returns the number of field goals made by the basketball player.
      *
-     * @return
+     * @return the number of field goals made by the basketball player.
      */
     public int getFieldGoals() {
         return fieldGoals;
@@ -82,7 +82,7 @@ public class BasketballPlayer extends Player {
     /**
      * Returns the number of three pointers made by the basketball player.
      *
-     * @return
+     * @return the number of three pointers made by the basketball player.
      */
     public int getThreePointers() {
         return threePointers;
@@ -100,7 +100,7 @@ public class BasketballPlayer extends Player {
     /**
      * Returns the total number of points accumulated by the basketball player.
      *
-     * @return
+     * @return the total number of points accumulated by the basketball player.
      */
     public int getPoints() {
         return freeThrows + (2 * fieldGoals) + (3 * threePointers);
@@ -109,7 +109,7 @@ public class BasketballPlayer extends Player {
     /**
      * Returns the String representation of the player.
      *
-     * @return
+     * @return the String representation of the player.
      */
     @Override
     public String toString() {
