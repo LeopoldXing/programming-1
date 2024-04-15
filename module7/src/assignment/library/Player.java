@@ -13,7 +13,7 @@ package assignment.library;
  * @author Luping Xing [lxing2@rrc.ca]
  * @version 1.0.0
  */
-public class Player {
+public abstract class Player {
 
     /**
      * The name of the player.
@@ -77,9 +77,7 @@ public class Player {
      *
      * @return Returns the total number of points accumulated by the player.
      */
-    public int getPoints() {
-        return 0;
-    }
+    public abstract int getPoints();
 
     /**
      * Returns the String representation of the player.
