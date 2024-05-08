@@ -92,7 +92,6 @@ public class HockeyPlayer extends Player {
      *
      * @return the total number of points accumulated by the hockey player.
      */
-    @Override
     public int getPoints() {
         return goals + assists;
     }

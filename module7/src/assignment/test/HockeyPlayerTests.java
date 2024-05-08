@@ -82,9 +82,9 @@ public class HockeyPlayerTests {
         // Test #1 - Updates the state of goals.
         System.out.println("Test #1 - Updates the state of goals.");
         hockeyPlayer = new HockeyPlayer("John Smith", 8);
-        hockeyPlayer.setNumber(10);
+        hockeyPlayer.setGoals(10);
         System.out.println("Expected: 10");
-        System.out.println("Actual: " + hockeyPlayer.getNumber());
+        System.out.println("Actual: " + hockeyPlayer.getGoals());
         System.out.println();
 
         // Test Unit: setAssists(int) : void
